@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-               bat ".\gradlew :common-jre:test :common-jre:jacocoTestReport"
+               bat ".\\gradlew :common-jre:test :common-jre:jacocoTestReport"
             }
         }
         stage('reports') {
