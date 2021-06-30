@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                updateGitlabCommitStatus name: 'build', state: 'pending'
-                writeFile file: 'changes.csv', text: getChangelog()
                 sh label: 'test', script: "./gradlew :common-jre:test :common-jre:jacocoTestReport"
             }
         }
