@@ -1,7 +1,4 @@
 pipeline {
-    options {
-        gitLabConnection('git.geogebra.org')
-    }
     agent any
     stages {
         stage('build') {
